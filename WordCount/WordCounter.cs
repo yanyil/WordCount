@@ -2,11 +2,18 @@
 
 namespace WordCount
 {
-	public class WordCounter
+	public static class WordCounter
 	{
 		public static IDictionary<string, int> CountWords(string inputText)
 		{
-			return new Dictionary<string, int>();
+			var counts = new Dictionary<string, int>();
+
+			if (inputText.Length != 0)
+			{
+				counts.Add(inputText, 1);
+			}
+
+			return counts;
 		}
 	}
 }
