@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 
 namespace WordCount
 {
@@ -7,8 +6,9 @@ namespace WordCount
 	public class WordCounterTest
 	{
 		[Test]
-		public void TestCase()
+		public void Empty_String()
 		{
+			Assert.That(WordCounter.CountWords(""), Is.Empty);
 		}
 	}
 }
