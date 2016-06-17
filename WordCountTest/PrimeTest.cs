@@ -53,5 +53,17 @@ namespace WordCount
         {
             Assert.False(Prime.IsPrime(number));
         }
+
+        [Test]
+        public void Big_Prime()
+        {
+            Assert.True(Prime.IsPrime(2147483423));
+        }
+
+        [Test]
+        public void Big_Composite()
+        {
+            Assert.False(Prime.IsPrime(2147483646));
+        }
     }
 }
