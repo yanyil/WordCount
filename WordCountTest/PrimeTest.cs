@@ -15,5 +15,19 @@ namespace WordCount
         {
             Assert.False(Prime.IsPrime(number));
         }
+
+        [Test]
+        [TestCase(0)]
+        [TestCase(1)]
+        public void Zero_And_One(int number)
+        {
+            Assert.False(Prime.IsPrime(number));
+        }
+
+        [Test]
+        public void Number_Two()
+        {
+            Assert.True(Prime.IsPrime(2));
+        }
     }
 }
