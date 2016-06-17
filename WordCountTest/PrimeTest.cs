@@ -41,5 +41,17 @@ namespace WordCount
         {
             Assert.True(Prime.IsPrime(number));
         }
+
+        [Test]
+        [TestCase(4)]
+        [TestCase(6)]
+        [TestCase(8)]
+        [TestCase(9)]
+        [TestCase(10)]
+        [TestCase(12)]
+        public void Small_Composites(int number)
+        {
+            Assert.False(Prime.IsPrime(number));
+        }
     }
 }
