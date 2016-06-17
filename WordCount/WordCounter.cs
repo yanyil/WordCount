@@ -15,7 +15,10 @@ namespace WordCount
 
             while(wordMatch.Success)
             {
-                counts.Add(wordMatch.Value, 1);
+                int currentCount;
+
+                counts.TryGetValue(wordMatch.Value, out currentCount);
+                counts[wordMatch.Value] = currentCount + 1;
                 wordMatch = wordMatch.NextMatch();
             }
 
@@ -23,4 +26,3 @@ namespace WordCount
 		}
 	}
 }
-

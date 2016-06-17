@@ -33,5 +33,17 @@ namespace WordCount
 
 			Assert.That(WordCounter.CountWords("each word once"), Is.EqualTo(counts));
 		}
+
+        [Test]
+        public void Count_Multiple_Occurrences()
+        {
+            var input = "multiple occurrences multiple multiple occurrences";
+            var counts = new Dictionary<string, int> {
+                { "multiple", 3 },
+                { "occurrences", 2 }
+            };
+
+            Assert.That(WordCounter.CountWords(input), Is.EqualTo(counts));
+        }
 	}
 }
