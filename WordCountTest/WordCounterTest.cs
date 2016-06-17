@@ -55,5 +55,16 @@ namespace WordCount
 
             Assert.That(WordCounter.CountWords("ignore? :!!.@#$%^&"), Is.EqualTo(counts));
         }
+
+        [Test]
+        public void Ignore_Capitalisation()
+        {
+            var counts = new Dictionary<string, int> {
+                { "no", 1 },
+                { "caps", 1 }
+            };
+
+            Assert.That(WordCounter.CountWords("No CAPS"), Is.EqualTo(counts));
+        }
 	}
 }

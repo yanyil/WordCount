@@ -11,14 +11,15 @@ namespace WordCount
 
             if (inputText.Length == 0) return counts;
 
-            Match wordMatch = Regex.Match(inputText, @"\w+");
+            Match wordMatch = Regex.Match(inputText, @"(?i)\w+");
 
             while(wordMatch.Success)
             {
                 int currentCount;
+                string word = wordMatch.Value.ToLower();
 
-                counts.TryGetValue(wordMatch.Value, out currentCount);
-                counts[wordMatch.Value] = currentCount + 1;
+                counts.TryGetValue(word, out currentCount);
+                counts[word] = currentCount + 1;
                 wordMatch = wordMatch.NextMatch();
             }
 
