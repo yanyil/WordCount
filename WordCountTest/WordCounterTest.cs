@@ -45,5 +45,15 @@ namespace WordCount
 
             Assert.That(WordCounter.CountWords(input), Is.EqualTo(counts));
         }
+
+        [Test]
+        public void Ignore_Punctuation()
+        {
+            var counts = new Dictionary<string, int> {
+                { "ignore", 1 }
+            };
+
+            Assert.That(WordCounter.CountWords("ignore? :!!.@#$%^&"), Is.EqualTo(counts));
+        }
 	}
 }
