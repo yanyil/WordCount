@@ -29,5 +29,17 @@ namespace WordCount
         {
             Assert.True(Prime.IsPrime(2));
         }
+
+        [Test]
+        [TestCase(2)]
+        [TestCase(3)]
+        [TestCase(5)]
+        [TestCase(7)]
+        [TestCase(11)]
+        [TestCase(13)]
+        public void Small_Primes(int number)
+        {
+            Assert.True(Prime.IsPrime(number));
+        }
     }
 }
