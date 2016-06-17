@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="WordCounterTest.cs" />
+    <Compile Include="PrimeTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WordCount\WordCount.csproj">

@@ -34,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="WordCounter.cs" />
+    <Compile Include="Prime.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
