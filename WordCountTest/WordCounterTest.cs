@@ -21,6 +21,17 @@ namespace WordCount
 
 			Assert.That(WordCounter.CountWords("word"), Is.EqualTo(counts));
 		}
+
+		[Test]
+		public void Count_Each_Word_Once()
+		{
+			var counts = new Dictionary<string, int> {
+				{ "each", 1 },
+				{ "word", 1 },
+				{ "once", 1 }
+			};
+
+			Assert.That(WordCounter.CountWords("each word once"), Is.EqualTo(counts));
+		}
 	}
 }
-

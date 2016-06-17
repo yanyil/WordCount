@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCount", "WordCount\WordCount.csproj", "{0C0F4701-7961-4244-BBE1-449CDE31FF57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCountTest", "WordCountTest\WordCountTest.csproj", "{09879EF8-599A-4929-BB39-41C57D272B9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,37 @@ Global
 		{0C0F4701-7961-4244-BBE1-449CDE31FF57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C0F4701-7961-4244-BBE1-449CDE31FF57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C0F4701-7961-4244-BBE1-449CDE31FF57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09879EF8-599A-4929-BB39-41C57D272B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09879EF8-599A-4929-BB39-41C57D272B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09879EF8-599A-4929-BB39-41C57D272B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09879EF8-599A-4929-BB39-41C57D272B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = VisualStudio
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.IndentSwitchSection = True
+		$2.NewLinesForBracesInProperties = True
+		$2.NewLinesForBracesInAccessors = True
+		$2.NewLinesForBracesInAnonymousMethods = True
+		$2.NewLinesForBracesInControlBlocks = True
+		$2.NewLinesForBracesInAnonymousTypes = True
+		$2.NewLinesForBracesInObjectCollectionArrayInitializers = True
+		$2.NewLinesForBracesInLambdaExpressionBody = True
+		$2.NewLineForElse = True
+		$2.NewLineForCatch = True
+		$2.NewLineForFinally = True
+		$2.NewLineForMembersInObjectInit = True
+		$2.NewLineForMembersInAnonymousTypes = True
+		$2.NewLineForClausesInQuery = True
+		$2.SpacingAfterMethodDeclarationName = False
+		$2.SpaceAfterMethodCallName = False
+		$2.SpaceBeforeOpenSquareBracket = False
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
 	EndGlobalSection
 EndGlobal

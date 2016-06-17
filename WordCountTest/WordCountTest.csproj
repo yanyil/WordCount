@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0C0F4701-7961-4244-BBE1-449CDE31FF57}</ProjectGuid>
+    <ProjectGuid>{09879EF8-599A-4929-BB39-41C57D272B9E}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WordCount</RootNamespace>
-    <AssemblyName>WordCount</AssemblyName>
+    <RootNamespace>WordCountTest</RootNamespace>
+    <AssemblyName>WordCountTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -33,10 +33,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WordCounter.cs" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="WordCounterTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WordCount\WordCount.csproj">
+      <Project>{0C0F4701-7961-4244-BBE1-449CDE31FF57}</Project>
+      <Name>WordCount</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
