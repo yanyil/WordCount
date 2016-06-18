@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09879EF8-599A-4929-BB39-41C57D272B9E}</ProjectGuid>
+    <ProjectGuid>{DBC0C5F9-0847-4740-801F-E4BB4D4E9CB3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WordCountTest</RootNamespace>
-    <AssemblyName>WordCountTest</AssemblyName>
+    <RootNamespace>WordCountAlt</RootNamespace>
+    <AssemblyName>WordCountAlt</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -36,24 +36,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WordCounterTest.cs" />
-    <Compile Include="PrimeTest.cs" />
-    <Compile Include="BookInfoTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WordCount\WordCount.csproj">
-      <Project>{0C0F4701-7961-4244-BBE1-449CDE31FF57}</Project>
-      <Name>WordCount</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WordCountAlt\WordCountAlt.csproj">
-      <Project>{DBC0C5F9-0847-4740-801F-E4BB4D4E9CB3}</Project>
-      <Name>WordCountAlt</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="TestData\test.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <Compile Include="WordCounter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

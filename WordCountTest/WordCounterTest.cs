@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace WordCount
+namespace WordCountAlt
 {
 	[TestFixture]
 	public class WordCounterTest
