@@ -12,8 +12,9 @@ namespace WordCount
             foreach(var word in WordCounter.CountWords(text))
             {
                 var v = word.Value;
+                var s = String.Format("{0} {1} {2}\n", word.Key, v, ParseIsPrime(v));
 
-                Console.WriteLine("{0} {1} {2}", word.Key, v, ParseIsPrime(v));
+                File.AppendAllText(args[1], s);
             }
         }
 

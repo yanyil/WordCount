@@ -8,32 +8,46 @@ namespace WordCount
     [TestFixture]
     public class BookInfoTest
     {
-        [Test]
-        public void Output_Book_Info()
+        static readonly Assembly assembly = Assembly.GetExecutingAssembly();
+        static readonly string baseDir = Path.GetDirectoryName(assembly.Location);
+
+        [TearDown]
+        public void Cleanup()
         {
-            TextWriter originalConsole = Console.Out;
+            var fileOut = baseDir + "/TestData/temp.txt";
 
-            using (var writer = new StringWriter())
+            if (File.Exists(fileOut))
             {
-                Console.SetOut(writer);
-
-                var assembly = Assembly.GetExecutingAssembly();
-                var baseDir = Path.GetDirectoryName(assembly.Location);
-                var filePath = baseDir + "/TestData/test.txt";
-
-                BookInfo.Main(new string[] { filePath });
-
-                var expected = "a 1 \n" +
-                               "text 1 \n" +
-                               "file 1 \n" +
-                               "for 1 \n" +
-                               "testing 2 prime" +
-                               Environment.NewLine;
-
-                Assert.That(writer.ToString(), Is.EqualTo(expected));
+                try
+                {
+                    File.Delete(fileOut);
+                }
+                catch (IOException e)
+                {
+                    Console.WriteLine(e.Message);
+                    return;
+                }
             }
+        }
 
-            Console.SetOut(originalConsole);
+        [Test]
+        public void Output_Book_Info_To_File()
+        {
+            var fileIn = baseDir + "/TestData/test.txt";
+            var fileOut = baseDir + "/TestData/temp.txt";
+
+            BookInfo.Main(new string[] { fileIn, fileOut });
+
+            var text = File.ReadAllText(fileOut);
+
+            var expected = "a 1 \n" +
+                           "text 1 \n" +
+                           "file 1 \n" +
+                           "for 1 \n" +
+                           "testing 2 prime" +
+                           Environment.NewLine;
+
+            Assert.That(text, Is.EqualTo(expected));
         }
     }
 }
