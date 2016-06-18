@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace WordCount
+namespace WordCountAlt
 {
     [TestFixture]
     public class PrimeTest

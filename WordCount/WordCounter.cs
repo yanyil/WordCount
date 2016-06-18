@@ -3,11 +3,11 @@ using System.Text.RegularExpressions;
 
 namespace WordCount
 {
-	public static class WordCounter
-	{
-		public static IDictionary<string, int> CountWords(string inputText)
-		{
-			var counts = new Dictionary<string, int>();
+    public static class WordCounter
+    {
+        public static IDictionary<string, int> CountWords(string inputText)
+        {
+            var counts = new Dictionary<string, int>();
 
             if (inputText.Length == 0) return counts;
 
@@ -23,7 +23,7 @@ namespace WordCount
                 wordMatch = wordMatch.NextMatch();
             }
 
-			return counts;
-		}
-	}
+            return counts;
+        }
+    }
 }
