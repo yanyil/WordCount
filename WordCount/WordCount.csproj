@@ -35,6 +35,7 @@
   <ItemGroup>
     <Compile Include="WordCounter.cs" />
     <Compile Include="Prime.cs" />
+    <Compile Include="BookInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
