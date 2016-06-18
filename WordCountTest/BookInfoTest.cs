@@ -17,16 +17,17 @@ namespace WordCount
             {
                 Console.SetOut(writer);
 
-                var baseDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                var assembly = Assembly.GetExecutingAssembly();
+                var baseDir = Path.GetDirectoryName(assembly.Location);
                 var filePath = baseDir + "/TestData/test.txt";
 
                 BookInfo.Main(new string[] { filePath });
 
-                var expected = "a 1\n" +
-                               "text 1\n" +
-                               "file 1\n" +
-                               "for 1\n" +
-                               "testing 2" +
+                var expected = "a 1 \n" +
+                               "text 1 \n" +
+                               "file 1 \n" +
+                               "for 1 \n" +
+                               "testing 2 prime" +
                                Environment.NewLine;
 
                 Assert.That(writer.ToString(), Is.EqualTo(expected));

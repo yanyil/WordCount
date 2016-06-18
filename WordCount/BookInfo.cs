@@ -11,8 +11,15 @@ namespace WordCount
 
             foreach(var word in WordCounter.CountWords(text))
             {
-                Console.WriteLine("{0} {1}", word.Key, word.Value);
+                var v = word.Value;
+
+                Console.WriteLine("{0} {1} {2}", word.Key, v, ParseIsPrime(v));
             }
+        }
+
+        private static string ParseIsPrime(int number)
+        {
+            return Prime.IsPrime(number) ? "prime" : "";
         }
     }
 }
