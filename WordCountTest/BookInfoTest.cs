@@ -36,7 +36,7 @@ namespace WordCount
             var fileIn = baseDir + "/TestData/test.txt";
             var fileOut = baseDir + "/TestData/temp.txt";
 
-            BookInfo.Main(new string[] { fileIn, fileOut });
+            BookInfo.OutputToFile(fileIn, fileOut);
 
             var text = File.ReadAllText(fileOut);
 
